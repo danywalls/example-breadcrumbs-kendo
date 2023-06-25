@@ -1,35 +1,20 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { BreadCrumbItem } from '@progress/kendo-angular-navigation';
+import {Component, inject} from '@angular/core';
+import {BreadCrumbService} from "./services/breadcrumb.service";
+import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public items: BreadCrumbItem[] = [
-    {
-      text: 'Home',
-      title: 'Home',
-    },
-    {
-      text: 'teams',
-      title: 'Teams'
-    },
-    {
-      text: 'Players',
-      title: 'teams/players'
-    },
-    {
-      text: 'stats',
-      title: 'teams/players/stats'
+    #breadcrumbService = inject(BreadCrumbService)
+    public items$ = this.#breadcrumbService.items$
+    #router = inject(Router);
+
+
+    public onItemClick(item: any) {
+        this.#breadcrumbService.updateBreadcrumb(item)
+        this.#router.navigate([item.path]);
     }
-  ];
-
-  constructor(private router: Router) { }
-
-  public onItemClick(item: BreadCrumbItem): void {
-    this.router.navigate([item.title?.toLowerCase()]);
-  }
 }

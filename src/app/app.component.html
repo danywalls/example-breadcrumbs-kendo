@@ -1,7 +1,15 @@
-    <kendo-breadcrumb
-      (itemClick)="onItemClick($event)"
-      [items]="items"
-    ></kendo-breadcrumb>
-<router-outlet>
+<header>
+    <h1>NBA Store</h1>
+</header>
+<section>
+    <app-navigation></app-navigation>
+    <ng-container *ngIf="items$ | async as items">
+        <kendo-breadcrumb (itemClick)="onItemClick($event)" [items]="items"></kendo-breadcrumb>
+    </ng-container>
 
-</router-outlet>
+</section>
+
+<router-outlet></router-outlet>
+<footer>
+    <span>2023</span>
+</footer>

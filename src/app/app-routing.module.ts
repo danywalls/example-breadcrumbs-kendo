@@ -1,39 +1,37 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { TeamComponent } from './pages/team/team.component';
-import { PlayersComponent } from './pages/team/players/players.component';
-import { StatsComponent } from './pages/team/players/stats/stats.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HomeComponent} from './pages/home/home.component';
+import {TeamsComponent} from "./pages/teams/teams.component";
+import {PlayersComponent} from "./pages/players/players.component";
+import {StatsComponent} from "./pages/stats/stats.component";
+
 
 const routes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent,
-  },
-  {
-    path: '',
-     redirectTo: '/home', pathMatch: 'full'
-  },
-  {
-    path: 'teams',
-    component: TeamComponent,
-    children: [
-      {
-        path: 'players',
-        component: PlayersComponent,
-        children: [
-          {
-            path: 'stats',
-            component: StatsComponent,
-          },
-        ],
-      },
-    ],
-  },
+    {
+        path: 'home',
+        component: HomeComponent,
+    },
+    {
+        path: '',
+        redirectTo: '/home', pathMatch: 'full'
+    },
+    {
+        path: 'teams',
+        component: TeamsComponent,
+    },
+    {
+        path: 'teams/players',
+        component: PlayersComponent
+    },
+    {
+        path: 'teams/players/stats/:team_id',
+        component: StatsComponent
+    }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}
