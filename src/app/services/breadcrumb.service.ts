@@ -14,7 +14,9 @@ export class BreadCrumbService {
 
     addChild(item: any) {
         const currentItems = this.items$.value;
-        this.items$.next([...currentItems, item]);
+        if (currentItems.some((p: any) => p.title !== item.title)) {
+            this.items$.next([...currentItems, item]);
+        }
     }
 
     addParent(item: any) {
@@ -25,8 +27,8 @@ export class BreadCrumbService {
         const currentItems = this.items$.value;
         if (currentItems.some((p: any) => p.title === item.title)) {
             currentItems.pop();
-            this.items$.next([...currentItems]);
         }
+        this.items$.next([...currentItems]);
 
     }
 }

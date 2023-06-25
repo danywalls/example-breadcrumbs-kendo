@@ -18,7 +18,7 @@ export class NbaService {
         map((response) => response?.data)
     )
 
-    stats$ = this.http.get<any>(`${this.#API}/players/236`).pipe(
+    stats$ = this.http.get<any>(`${this.#API}/players/47`).pipe(
         map((response) => response)
     )
 
