@@ -4,10 +4,22 @@ import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html',
+    template: `
+        <app-navigation></app-navigation>
+        <section>
+            <ng-container *ngIf="items$ | async as items">
+                <kendo-breadcrumb (itemClick)="onItemClick($event)" [items]="items"></kendo-breadcrumb>
+            </ng-container>
+        </section>
+        <router-outlet></router-outlet>
+        <footer>
+            <span>2023</span>
+        </footer>
+    `,
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
     #breadcrumbService = inject(BreadCrumbService)
     public items$ = this.#breadcrumbService.items$
     #router = inject(Router);

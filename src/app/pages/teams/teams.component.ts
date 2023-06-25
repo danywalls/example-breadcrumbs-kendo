@@ -1,7 +1,6 @@
 import {Component, inject} from '@angular/core';
 import {NbaService} from "../../services/nba.service";
 import {BreadCrumbService} from "../../services/breadcrumb.service";
-import {Router} from "@angular/router";
 
 @Component({
     selector: 'teams',
@@ -18,7 +17,6 @@ import {Router} from "@angular/router";
 export class TeamsComponent {
     teams$ = inject(NbaService).teams$;
     breadcrumbService = inject(BreadCrumbService);
-    router = inject(Router);
 
     addToBreadcrumb() {
         this.breadcrumbService.addChild({

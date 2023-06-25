@@ -1,4 +1,0 @@
-<ng-container *ngIf="players$ | async as players">
-    <app-player (click)="addToBreadcrumb()" *ngFor="let player of players"
-                [player]="player" routerLink="stats/{{player?.id}}"/>
-</ng-container>

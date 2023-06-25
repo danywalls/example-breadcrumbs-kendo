@@ -29,6 +29,5 @@ export class BreadCrumbService {
             currentItems.pop();
         }
         this.items$.next([...currentItems]);
-
     }
 }
