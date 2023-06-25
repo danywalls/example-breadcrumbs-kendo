@@ -1,12 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'about',
     template: `
-    <h2>About</h2>
-    <p>This is the new NBA page</p>
+        <div>
+            <h2>About</h2>
+            <p>New App using Kendo Breadcrumb Angular</p>
+        </div>
+
     `
 })
 
-export class AboutComponent  {
+export class AboutComponent {
 }

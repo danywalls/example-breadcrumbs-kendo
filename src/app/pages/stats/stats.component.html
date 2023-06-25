@@ -1,3 +1,6 @@
-<h2>Stats</h2>
-
-
+<ng-container *ngIf="stats$ | async as stats">
+    <h2>Details Of: {{stats.first_name}} {{stats.last_name}}</h2>
+    <p><b>Name:</b> {{stats.first_name}} {{stats.last_name}}</p>
+    <p><b>Position:</b> {{stats.position}}</p>
+    <p><b>Pounds:</b> {{stats.weight_pounds }}</p>
+</ng-container>

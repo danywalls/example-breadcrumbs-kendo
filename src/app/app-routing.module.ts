@@ -4,6 +4,7 @@ import {HomeComponent} from './pages/home/home.component';
 import {TeamsComponent} from "./pages/teams/teams.component";
 import {PlayersComponent} from "./pages/players/players.component";
 import {StatsComponent} from "./pages/stats/stats.component";
+import {AboutComponent} from "./pages/about/about.component";
 
 
 const routes: Routes = [
@@ -14,6 +15,10 @@ const routes: Routes = [
     {
         path: '',
         redirectTo: '/home', pathMatch: 'full'
+    },
+    {
+        path: 'about',
+        component: AboutComponent
     },
     {
         path: 'teams',

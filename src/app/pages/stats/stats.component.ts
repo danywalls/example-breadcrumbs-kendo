@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component, inject} from '@angular/core';
+import {NbaService} from "../../services/nba.service";
 
 @Component({
     selector: 'app-stats',
@@ -6,5 +7,5 @@ import {Component, Input} from '@angular/core';
     styleUrls: ['./stats.component.scss']
 })
 export class StatsComponent {
-    @Input() stats: any;
+    stats$ = inject(NbaService).stats$
 }

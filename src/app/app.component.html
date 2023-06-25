@@ -1,8 +1,6 @@
-<header>
-    <h1>NBA Store</h1>
-</header>
+<app-navigation></app-navigation>
 <section>
-    <app-navigation></app-navigation>
+
     <ng-container *ngIf="items$ | async as items">
         <kendo-breadcrumb (itemClick)="onItemClick($event)" [items]="items"></kendo-breadcrumb>
     </ng-container>

@@ -4,10 +4,11 @@ import {BreadCrumbService} from "../../services/breadcrumb.service";
 @Component({
     selector: 'app-navigation',
     template: `
-        <ul>
-            <li *ngFor="let navItem of navigationItems;" [routerLink]="navItem.path"
-                (click)="updateBreadCrumb(navItem)">{{navItem.title}}</li>
-        </ul>
+        <h1>NBA Fan</h1>
+        <nav>
+            <a *ngFor="let navItem of navigationItems;" [routerLink]="navItem.path"
+               (click)="updateBreadCrumb(navItem)">{{navItem.title}}</a>
+        </nav>
     `,
 })
 
