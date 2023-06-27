@@ -11,6 +11,8 @@ import {NbaService} from "./services/nba.service";
 import {HttpClientModule} from "@angular/common/http";
 import {components} from "./components";
 import {BreadCrumbService} from "./services/breadcrumb.service";
+import { GridModule } from '@progress/kendo-angular-grid';
+
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import {BreadCrumbService} from "./services/breadcrumb.service";
         AppRoutingModule,
         NavigationModule,
         BrowserAnimationsModule,
-        HttpClientModule
+        HttpClientModule,
+        GridModule
     ],
     providers: [
         NbaService,
