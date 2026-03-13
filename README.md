@@ -14,6 +14,17 @@ This project implements a dynamic breadcrumb navigation system for Angular appli
 1. `ng serve` 
 2. Navigate through the routes to see the breadcrumb trail update automatically.
 
+## Project Summary
+This project implements a dynamic breadcrumb navigation system for Angular applications using Kendo UI and a centralized breadcrumb service.
+
+## How to Run
+### Installation
+1. `npm install` 
+
+### Running
+1. `ng serve` 
+2. Navigate through the routes to see the breadcrumb trail update automatically.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
 ## Development server
