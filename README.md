@@ -1,4 +1,18 @@
-# Nba
+> [!NOTE]
+> This repository contains the source code for the article: **[Build a Dynamic Breadcrumb Trail with Kendo UI for Angular](https://www.telerik.com/blogs/build-dynamic-breadcrumb-trail-kendo-ui-angular)** originally published on [Telerik Blogs](https://www.telerik.com/blogs).
+
+# Build a Dynamic Breadcrumb Trail with Kendo UI for Angular
+
+## Project Summary
+This project implements a dynamic breadcrumb navigation system for Angular applications using Kendo UI and a centralized breadcrumb service.
+
+## How to Run
+### Installation
+1. `npm install` 
+
+### Running
+1. `ng serve` 
+2. Navigate through the routes to see the breadcrumb trail update automatically.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
@@ -25,3 +39,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+---
+Stay connected: [@danywalls](https://twitter.com/danywalls)
